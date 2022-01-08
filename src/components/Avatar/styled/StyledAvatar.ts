@@ -24,6 +24,6 @@ const StyledAvatar = styled.div<AvatarProps>`
         background-repeat: no-repeat;
         background-size: cover;
     `}
-    ${props => props.onClick ? `cursor: pointer; background-color: red;` : null}
+    ${props => props.onClick ? `cursor: pointer;` : null}
 `
 export default StyledAvatar
