@@ -4,7 +4,18 @@ import ComponentProps from './Button.types'
 import StyledButton from './styled/StyledButton'
 import getColor from '../../utils/getColor'
 
-const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, disabled, rounded, className, label, color = 'sky-700' }) => {
+const Button: React.FC<ComponentProps> = ({
+    children = null,
+    variant = 'filled',
+    size = 20,
+    onClick = undefined,
+    disabled = false,
+    rounded = false,
+    label = undefined,
+    type = 'submit',
+    className = undefined,
+    color = 'sky-700',
+}) => {
     const textColor = getColor(color)
 
     return (
@@ -15,6 +26,7 @@ const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, di
             disabled={disabled}
             rounded={rounded}
             label={label}
+            type={type}
             className={className}
             color={color}
             textColor={textColor}
@@ -22,18 +34,6 @@ const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, di
             {children || label}
         </StyledButton>
     )
-};
-
-Button.defaultProps = {
-    children: null,
-    variant: 'filled',
-    size: 20,
-    onClick: () => { },
-    disabled: false,
-    rounded: false,
-    label: '',
-    className: '',
-    color: 'sky-700',
 }
 
-export default Button;
+export default Button

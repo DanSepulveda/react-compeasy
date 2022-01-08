@@ -13,7 +13,7 @@ const StyledButton = styled.button<ButtonProps>`
     cursor: pointer;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
-    transition: all .5s ease;
+    transition: all .3s ease;
     display: flex;
     justify-content: center;
     align-items: center;

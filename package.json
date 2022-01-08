@@ -34,6 +34,7 @@
     "babel-loader": "^8.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.7",
+    "react-icons": "^4.3.1",
     "rollup": "^2.63.0",
     "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
