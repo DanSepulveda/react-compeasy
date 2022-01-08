@@ -1,10 +1,14 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import React from "react"
+import { render, screen } from "@testing-library/react"
 
-import Button from "./Button";
+import Button from "./Button"
 
-describe("Button", () => {
+describe("Button Component", () => {
     test("renders the Button component", () => {
-        render(<Button label="Hello world!" variant="filled" color="slate-50" />);
-    });
+        render(<Button label="Hello world!" />)
+    })
+    test("it should be disabled", () => {
+        render(<Button label="Send message" disabled />)
+        expect(screen.getByText('Send message')).toBeDisabled
+    })
 });

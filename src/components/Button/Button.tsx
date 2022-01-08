@@ -4,7 +4,7 @@ import ComponentProps from './Button.types'
 import StyledButton from './styled/StyledButton'
 import getColor from '../../utils/getColor'
 
-const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, disabled, rounded, className, label, color }) => {
+const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, disabled, rounded, className, label, color = 'sky-700' }) => {
     const textColor = getColor(color)
 
     return (

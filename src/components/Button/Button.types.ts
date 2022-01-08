@@ -8,5 +8,5 @@ export default interface ComponentProps extends BasicProps {
     onClick?: MouseEventHandler<HTMLButtonElement>,
     disabled?: boolean,
     rounded?: boolean,
-    label?: string
+    label: string
 }
