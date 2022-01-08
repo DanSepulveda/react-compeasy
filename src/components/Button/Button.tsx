@@ -1,8 +1,8 @@
 import '../../styles.css'
-import React from "react";
-import ComponentProps from './Button.types';
+import React from "react"
+import ComponentProps from './Button.types'
 import StyledButton from './styled/StyledButton'
-import getColor from '../../utils/getColor';
+import getColor from '../../utils/getColor'
 
 const Button: React.FC<ComponentProps> = ({ children, variant, size, onClick, disabled, rounded, className, label, color }) => {
     const textColor = getColor(color)
