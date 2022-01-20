@@ -1,12 +1,12 @@
-import React from 'react'
+import { MouseEventHandler } from 'react'
 import styled from 'styled-components'
-import { Variant } from '../../../types/button.types'
+import { Variant } from '../../../types/components.types'
 import { ColorName, Intensity } from '../../../types/color.types'
 
 interface ButtonProps {
     variant: Variant,
     size: number,
-    onClick?: React.ReactNode,
+    onClick?: MouseEventHandler,
     disabled: boolean,
     rounded: boolean,
     color: ColorName,

@@ -1,8 +1,18 @@
-import styled from "styled-components";
-import ComponentProps from "../Avatar.types";
+import { MouseEventHandler } from 'react'
+import styled from 'styled-components'
+import { ColorName, Intensity } from '../../../types/color.types'
+import { Shape } from '../../../types/components.types'
+import ComponentProps from '../Avatar.types'
 
 export interface AvatarProps extends ComponentProps {
-    textColor: string,
+    size: number,
+    shape: Shape,
+    src?: string,
+    onClick?: MouseEventHandler<HTMLDivElement>,
+    className?: string,
+    color: ColorName,
+    intensity: Intensity,
+    textColor: 50 | 700,
 }
 
 const StyledAvatar = styled.div<AvatarProps>`
@@ -24,6 +34,6 @@ const StyledAvatar = styled.div<AvatarProps>`
         background-repeat: no-repeat;
         background-size: cover;
     `}
-    ${props => props.onClick ? `cursor: pointer;` : null}
+    ${props => props.onClick ? 'cursor: pointer;' : null}
 `
 export default StyledAvatar
