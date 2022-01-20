@@ -1,4 +1,6 @@
-const getColor = (color: string) => {
+import { Color } from "../types/color.types"
+
+const getColor = (color: Color) => {
     const textColor = Number(color.slice(color.indexOf('-') + 1)) >= 400
         ? `${color.slice(0, color.indexOf('-') + 1)}50`
         : `${color.slice(0, color.indexOf('-') + 1)}700`
