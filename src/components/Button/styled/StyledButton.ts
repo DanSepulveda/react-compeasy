@@ -12,7 +12,6 @@ interface ButtonProps {
     color: ColorName,
     intensity: Intensity,
     textColor: 50 | 700,
-
 }
 
 const StyledButton = styled.button<ButtonProps>`
@@ -32,8 +31,9 @@ const StyledButton = styled.button<ButtonProps>`
     font-size: ${props => `${props.size}px`};
 
     color: ${props => props.variant.startsWith('outlined')
-        ? `rgb(var(--${props.color}-${props.textColor}))`
+        ? `rgb(var(--${props.color}-${props.intensity}))`
         : `rgb(var(--${props.color}-${props.textColor}))`};
+
 
     border: ${props => props.variant.startsWith('outlined')
         ? `1px solid rgba(var(--${props.color}-${props.intensity}), 0.6)`
@@ -45,10 +45,12 @@ const StyledButton = styled.button<ButtonProps>`
 
     > svg{
         font-size: ${props => `${props.size + 10}px`};
+
         fill: ${props => props.variant.startsWith('outlined')
         ? `rgb(var(--${props.color}-${props.intensity}))`
         : `rgb(var(--${props.color}-${props.textColor}))`};
-        transition: all .5s ease;
+
+        transition: all .3s ease;
     }
 
     :hover{
@@ -79,6 +81,18 @@ const StyledButton = styled.button<ButtonProps>`
         cursor: default;
         pointer-events: none;
         user-select: none;
+
+        color: ${props => props.variant.startsWith('outlined')
+        ? 'rgb(var(--gray-300))'
+        : 'rgb(var(--gray-50))'};
+
+        border: ${props => props.variant.startsWith('outlined')
+        ? '1px solid rgba(var(--gray-200), 0.6)'
+        : '1px solid transparent'};
+
+        background-color: ${props => props.variant.startsWith('filled')
+        ? `rgb(var(--gray-300))`
+        : 'transparent'};
     }
 `
 

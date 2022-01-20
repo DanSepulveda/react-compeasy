@@ -14,8 +14,8 @@ const Button: React.FC<ComponentProps> = ({
     label = undefined,
     type = 'submit',
     className = undefined,
-    color = 'sky',
-    intensity = 50
+    color = 'teal',
+    intensity = 400
 }): JSX.Element => {
 
     const textColor = getColor(intensity)

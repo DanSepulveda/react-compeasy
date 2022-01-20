@@ -33,14 +33,16 @@ Filled.args = {
     children: 'Send',
     variant: 'filled',
     size: 15,
-    color: 'cyan-500'
+    color: 'cyan',
+    intensity: 500
 }
 
 export const FilledOutlined = Template.bind({});
 FilledOutlined.args = {
     children: 'Send',
     variant: 'filled-outlined',
-    color: 'orange-600',
+    color: 'orange',
+    intensity: 600
 }
 
 export const Outline = Template.bind({});
@@ -48,26 +50,30 @@ Outline.args = {
     children: 'Send',
     variant: 'outlined',
     size: 25,
-    color: 'esmerald-700'
+    color: 'esmerald',
+    intensity: 700
 }
 
 export const OutlinedFilled = Template.bind({});
 OutlinedFilled.args = {
     children: 'Send',
     variant: 'outlined-filled',
-    color: 'rose-800',
+    color: 'rose',
+    intensity: 800,
     size: 50,
     rounded: true,
 }
 
 export const LeftIcon = IconLeft.bind({})
 LeftIcon.args = {
-    color: 'red-700',
+    color: 'red',
+    intensity: 700,
     rounded: true
 }
 
 export const RightIcon = IconRight.bind({})
 LeftIcon.args = {
-    color: 'red-700',
+    color: 'red',
+    intensity: 700,
     rounded: true
 }
