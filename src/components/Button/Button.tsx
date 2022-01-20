@@ -25,7 +25,6 @@ const Button: React.FC<ComponentProps> = ({
             onClick={onClick}
             disabled={disabled}
             rounded={rounded}
-            label={label}
             type={type}
             className={className}
             color={color}

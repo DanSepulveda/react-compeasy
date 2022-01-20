@@ -1,8 +1,13 @@
 import styled from 'styled-components'
-import ComponentProps from '../Button.types'
+import { Variant } from '../../../types/button.types'
+import { AllColors, TextColor } from '../../../types/color.types'
 
-export interface ButtonProps extends ComponentProps {
-    textColor: string,
+interface ButtonProps {
+    variant: Variant,
+    size: number,
+    rounded: boolean,
+    color: AllColors,
+    textColor: TextColor,
 }
 
 const StyledButton = styled.button<ButtonProps>`
