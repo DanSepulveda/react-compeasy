@@ -1,13 +1,18 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Variant } from '../../../types/button.types'
-import { AllColors, TextColor } from '../../../types/color.types'
+import { ColorName, Intensity } from '../../../types/color.types'
 
 interface ButtonProps {
     variant: Variant,
     size: number,
+    onClick?: React.ReactNode,
+    disabled: boolean,
     rounded: boolean,
-    color: AllColors,
-    textColor: TextColor,
+    color: ColorName,
+    intensity: Intensity,
+    textColor: 50 | 700,
+
 }
 
 const StyledButton = styled.button<ButtonProps>`
@@ -27,47 +32,47 @@ const StyledButton = styled.button<ButtonProps>`
     font-size: ${props => `${props.size}px`};
 
     color: ${props => props.variant.startsWith('outlined')
-        ? `rgb(var(--${props.color}))`
-        : `rgb(var(--${props.textColor}))`};
+        ? `rgb(var(--${props.color}-${props.textColor}))`
+        : `rgb(var(--${props.color}-${props.textColor}))`};
 
     border: ${props => props.variant.startsWith('outlined')
-        ? `1px solid rgba(var(--${props.color}), 0.6)`
+        ? `1px solid rgba(var(--${props.color}-${props.intensity}), 0.6)`
         : '1px solid transparent'};
 
     background-color: ${props => props.variant.startsWith('filled')
-        ? `rgb(var(--${props.color}))`
+        ? `rgb(var(--${props.color}-${props.intensity}))`
         : 'transparent'};
 
     > svg{
         font-size: ${props => `${props.size + 10}px`};
         fill: ${props => props.variant.startsWith('outlined')
-        ? `rgb(var(--${props.color}))`
-        : `rgb(var(--${props.textColor}))`};
+        ? `rgb(var(--${props.color}-${props.intensity}))`
+        : `rgb(var(--${props.color}-${props.textColor}))`};
         transition: all .5s ease;
     }
 
     :hover{
         background-color: ${props => props.variant.endsWith('outlined')
-        ? `rgba(var(--${props.color}), 0.08)`
-        : `rgba(var(--${props.color}), 0.85)`};
+        ? `rgba(var(--${props.color}-${props.intensity}), 0.08)`
+        : `rgba(var(--${props.color}-${props.intensity}), 0.85)`};
         border: ${props => props.variant.endsWith('outlined')
-        ? `1px solid rgb(var(--${props.color}))`
+        ? `1px solid rgb(var(--${props.color}-${props.intensity}))`
         : '1px solid transparent'};
         color: ${props => props.variant.endsWith('filled')
-        ? `rgb(var(--${props.textColor}))`
-        : `rgb(var(--${props.color}))`}
+        ? `rgb(var(--${props.color}-${props.textColor}))`
+        : `rgb(var(--${props.color}-${props.intensity}))`}
     }
 
     :hover svg{
         fill: ${props => props.variant.endsWith('filled')
-        ? `rgb(var(--${props.textColor}))`
-        : `rgb(var(--${props.color}))`}
+        ? `rgb(var(--${props.color}-${props.textColor}))`
+        : `rgb(var(--${props.color}-${props.intensity}))`}
     }
 
     :active{
         background-color: ${props => props.variant === 'outlined'
-        ? `rgba(var(--${props.color}), 0.3)`
-        : `rgba(var(--${props.color}), 0.7)`};
+        ? `rgba(var(--${props.color}-${props.intensity}), 0.3)`
+        : `rgba(var(--${props.color}-${props.intensity}), 0.7)`};
     }
     
     &[disabled]{

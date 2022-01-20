@@ -1,6 +1,7 @@
-import { AllColors } from './color.types'
+import { ColorName, Intensity } from './color.types'
 
 export default interface BasicProps {
     className?: string,
-    color?: AllColors
+    color?: ColorName,
+    intensity?: Intensity
 }

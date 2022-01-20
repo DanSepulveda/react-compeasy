@@ -10,5 +10,5 @@ export default interface ComponentProps extends BasicProps {
     disabled?: boolean,
     rounded?: boolean,
     label?: string,
-    type?: ButtonType
+    type?: ButtonType,
 }

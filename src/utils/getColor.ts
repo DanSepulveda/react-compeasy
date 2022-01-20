@@ -1,9 +1,10 @@
-import { AllColors, TextColor } from "../types/color.types"
+import { ColorNumber } from "../types/color.types"
 
-const getColor = (color: AllColors) => {
-    const textColor = Number(color.slice(color.indexOf('-') + 1)) >= 400
-        ? `${color.slice(0, color.indexOf('-'))}-50`
-        : `${color.slice(0, color.indexOf('-'))}-700`
+const getColor = (intensity: ColorNumber): 50 | 700 => {
+
+    const textColor = intensity >= 400
+        ? 50
+        : 700
 
     return textColor
 }

@@ -14,9 +14,11 @@ const Button: React.FC<ComponentProps> = ({
     label = undefined,
     type = 'submit',
     className = undefined,
-    color = 'sky-700',
+    color = 'sky',
+    intensity = 50
 }): JSX.Element => {
-    const textColor = getColor(color)
+
+    const textColor = getColor(intensity)
 
     return (
         <StyledButton
@@ -28,6 +30,7 @@ const Button: React.FC<ComponentProps> = ({
             type={type}
             className={className}
             color={color}
+            intensity={intensity}
             textColor={textColor}
         >
             {children || label}
