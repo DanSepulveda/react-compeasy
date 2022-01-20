@@ -1,5 +1,5 @@
 import '../../styles.css'
-import React from "react"
+import React from 'react'
 import ComponentProps from './Button.types'
 import StyledButton from './styled/StyledButton'
 import getColor from '../../utils/getColor'
@@ -17,7 +17,6 @@ const Button: React.FC<ComponentProps> = ({
     color = 'teal',
     intensity = 400
 }): JSX.Element => {
-
     const textColor = getColor(intensity)
 
     return (

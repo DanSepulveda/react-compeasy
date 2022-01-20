@@ -1,5 +1,5 @@
-import React, { MouseEventHandler } from "react";
-import BasicProps from "../../types/basics";
+import React, { MouseEventHandler } from 'react'
+import BasicProps from '../../types/basics'
 import { Variant, ButtonType } from '../../types/button.types'
 
 export default interface ComponentProps extends BasicProps {

@@ -1,14 +1,14 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import Button from './Button'
 import { AiOutlineSend } from 'react-icons/ai'
 
 export default {
-    title: "Basics/Button",
+    title: 'Basics/Button',
     component: Button,
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>{args.children}</Button>;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>{args.children}</Button>
 
 const IconLeft: ComponentStory<typeof Button> = (args) => (
     <Button {...args}>
@@ -23,12 +23,12 @@ const IconRight: ComponentStory<typeof Button> = (args) => (
     </Button>
 )
 
-export const DefaultButton = Template.bind({});
+export const DefaultButton = Template.bind({})
 DefaultButton.args = {
     label: 'Send',
-};
+}
 
-export const Filled = Template.bind({});
+export const Filled = Template.bind({})
 Filled.args = {
     children: 'Send',
     variant: 'filled',
@@ -37,7 +37,7 @@ Filled.args = {
     intensity: 500
 }
 
-export const FilledOutlined = Template.bind({});
+export const FilledOutlined = Template.bind({})
 FilledOutlined.args = {
     children: 'Send',
     variant: 'filled-outlined',
@@ -45,7 +45,7 @@ FilledOutlined.args = {
     intensity: 600
 }
 
-export const Outline = Template.bind({});
+export const Outline = Template.bind({})
 Outline.args = {
     children: 'Send',
     variant: 'outlined',
@@ -54,7 +54,7 @@ Outline.args = {
     intensity: 700
 }
 
-export const OutlinedFilled = Template.bind({});
+export const OutlinedFilled = Template.bind({})
 OutlinedFilled.args = {
     children: 'Send',
     variant: 'outlined-filled',
