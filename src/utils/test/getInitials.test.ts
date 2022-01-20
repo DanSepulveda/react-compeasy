@@ -16,4 +16,7 @@ describe("getItinials function", () => {
     test("'jD' should return 'JD'", () => {
         expect(getInitials('jD')).toBe('JD')
     })
+    test("empty string should return '-'", () => {
+        expect(getInitials('')).toBe('-')
+    })
 })
